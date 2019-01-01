@@ -83,6 +83,7 @@ export default class RedirectWebPart extends React.Component<IRedirectWebPartPro
       console.log("New URL: " + this.newUrl);
       console.log("Old URL: " + this.oldUrl);
     }
+    
 
     return (
       <div className={ styles.redirectWebPart }>
