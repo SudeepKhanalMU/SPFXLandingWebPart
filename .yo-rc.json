@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.6.0",
+    "libraryName": "redirect-web-part",
+    "libraryId": "a203bdf8-5131-43f0-90a9-927e896963e2",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
