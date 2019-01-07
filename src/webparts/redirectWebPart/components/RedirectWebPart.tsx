@@ -83,7 +83,7 @@ export default class RedirectWebPart extends React.Component<IRedirectWebPartPro
       console.log("New URL: " + this.newUrl);
       console.log("Old URL: " + this.oldUrl);
     }
-    
+
 
     return (
       <div className={ styles.redirectWebPart }>
@@ -135,10 +135,10 @@ export default class RedirectWebPart extends React.Component<IRedirectWebPartPro
       this.timer.cancelTimer();
 
       //set new interval from updated duration
-      this.setState({
+      this.state = {
         interval: this.props.duration,
-        redirectingText: this.props.autoRedirect ? 'Auto Redirecting in ' + this.props.duration + ' seconds '  : ''
-      });
+        redirectingText: this.props.autoRedirect ? 'You will be redirected to the new site in ' + this.props.duration + ' seconds ' : ''
+      };
 
       this.setRedirection();
     }

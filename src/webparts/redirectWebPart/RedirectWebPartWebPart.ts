@@ -6,7 +6,8 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
   PropertyPaneDropdown,
-  PropertyPaneToggle
+  PropertyPaneToggle,
+  PropertyPaneSlider
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'RedirectWebPartWebPartStrings';
@@ -56,15 +57,12 @@ export default class RedirectWebPartWebPart extends BaseClientSideWebPart<IRedir
                 PropertyPaneTextField('requestUrlToken', {
                   label: 'Request URL Token',
                 }),
-                PropertyPaneDropdown('duration', {
-                  label: 'Redirection Interval',
-                  options: [
-                    { key: 5, text: '5 Seconds'},
-                    { key: 10, text: '10 Seconds'},
-                    { key: 15, text: '15 Seconds'},
-                    { key: 20, text: '20 Seconds'},
-                    { key: 15, text: '30 Seconds'}
-                  ]
+                PropertyPaneSlider('duration', {
+                  min: 1,
+                  max: 15,
+                  showValue: true,
+                  step: 1,
+                  label: 'Redirection Interval (seconds)',
                 }),
                 PropertyPaneTextField('redirectButtonText', {
                   label: 'Redirection Button Text',
