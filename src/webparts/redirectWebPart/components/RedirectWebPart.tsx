@@ -104,7 +104,7 @@ export default class RedirectWebPart extends React.Component<IRedirectWebPartPro
                   Redirected URL: {this.newUrl}
                 </p>
 
-                <p className={ styles.subTitle }>Please update your bookmarks accordingly</p>
+                <p className={ styles.subTitle }>Please update your bookmarks accordingly.</p>
                 <a href={ this.newUrl } className={ styles.button }>
                   <span className={ styles.label }>{escape(this.props.redirectButtonText)}</span>
                 </a>
